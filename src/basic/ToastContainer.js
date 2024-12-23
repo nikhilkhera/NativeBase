@@ -70,10 +70,10 @@ class ToastContainer extends Component {
   }
 
   componentWillUnmount() {
-    if (this.kbDidShow) {
+    if (this.kbDidShow && this.kbDidShow.remove) {
       this.kbDidShow.remove();
     }
-    if (this.kbDidHide) {
+    if (this.kbDidHide && this.kbDidHide.remove) {
       this.kbDidHide.remove();
     }
   }
